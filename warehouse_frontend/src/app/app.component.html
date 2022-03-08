@@ -1,0 +1,27 @@
+<div *ngIf="getaccessoflinks()=='yes'; then thenblock else elseblock" ></div>
+   <ng-template #thenblock>
+      <nav  class="nav nav-pills flex-column flex-sm-row">
+         <a class="flex-sm-fill text-sm-center nav-link" href="home">Home</a>
+         <a class="flex-sm-fill text-sm-center nav-link" href="partslist">Parts List</a>
+         <a class="flex-sm-fill text-sm-center nav-link" href="insert-part">Insert Part</a>
+         <a class="flex-sm-fill text-sm-center nav-link" href="order-part">Place Order</a>
+         <a class="flex-sm-fill text-sm-center nav-link" href="dispatch-part">Dispatch Part</a>
+         <a class="flex-sm-fill text-sm-center nav-link" href="logout">Logout</a>
+       </nav>
+   </ng-template>
+   <ng-template #elseblock>
+      <ul class="nav justify-content-end">
+         <li class="nav-item">
+           <a class="nav-link active" aria-current="page" href="contactus">Contact Us</a>
+         </li>
+     </ul>
+   </ng-template>
+
+
+   
+<div class="container">
+   <!-- <app-parts-list></app-parts-list>-->
+   <!--<app-home></app-home>-->
+   <router-outlet></router-outlet>
+  
+</div>

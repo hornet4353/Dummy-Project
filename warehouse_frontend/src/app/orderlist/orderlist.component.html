@@ -1,0 +1,28 @@
+<ul class="nav justify-content-end">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="order-part">Go back to Order Page</a>
+    </li>
+</ul><br><br>
+
+<h1 class="text-center">Order List</h1><br><br>
+
+<table class="table table-striped" >
+    <thead>
+        <tr>
+            <th>Order Id</th>
+            <th>Part Number</th>
+            <th>Vendor Name</th>
+            <th>Quantity</th>
+            <th>Date of Order</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let o of order" >
+            <td>{{o.id}}</td>
+            <td>{{o.part.pnumber}}</td>
+            <td>{{o.name}}</td>
+            <td>{{o.quantity}}</td>
+            <td>{{o.date}}</td>
+        </tr>
+    </tbody>
+</table>

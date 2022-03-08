@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+.foort
+{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background-color: blanchedalmond;
+  text-align: center;
+  color: black;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.bg-img
+{
+    background-image: url('/assets/images/img.jpg');
+    image-rendering: pixelated; 
+    image-rendering: -webkit-optimize-contrast;
+    backdrop-filter: blur(6px);
+    background-position: center; 
+    background-size: 100% ;  
+    background-size: cover;  
+   
+  
+}

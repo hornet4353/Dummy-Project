@@ -1,0 +1,12 @@
+#id
+{
+    
+    background-image: url("../../assets/images/img.jpg");  
+    background-size: 100% ;  
+    background-size: cover;  
+    backdrop-filter: blur(10%);
+}
+span
+{
+    background-color: blue;
+}

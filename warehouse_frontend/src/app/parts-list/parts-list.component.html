@@ -1,0 +1,30 @@
+<br>
+<h2 class="text-center">Parts List</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Part Number</th>
+            <th>Part Name</th>
+            <th>Part Quantity</th>
+            <th>Part Location</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let p of parts">
+            <td>{{ p.pnumber }}</td>
+            <td>{{ p.pname }}</td>
+            <td>{{ p.plocation }}</td>
+            <td>{{ p.pquantity }}</td>
+            <td>
+                <div class="example-button-container">
+                    <button (click)="calldelete(p.pnumber)" mat-mini-fab color="accent" aria-label="Example icon button with a delete icon">
+                      <mat-icon>delete</mat-icon>
+                    </button>
+                  </div>
+            </td>
+        </tr>
+    </tbody>
+
+</table>
+

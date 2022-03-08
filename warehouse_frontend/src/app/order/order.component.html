@@ -1,0 +1,56 @@
+<br>
+
+<h3 class="text-center">Order Parts</h3>
+
+<br>
+
+<div class="order-text">
+  <p>Welcome to the Order Part page.</p>
+  <p>You can place the order for the part which is low on quantity</p>
+  <p> <b>Please mention vendor name Before placing order</b></p>
+</div>
+
+<button class="btn btn-primary" (click)="orderlistpage()">Show Order History</button><br><br>
+
+<div class="checking">
+  <form [formGroup]="ordercheck" (ngSubmit)="placeorder(ordercheck.value)">
+      
+      <div class="form-group">
+        <label for="exampleInputEmail1">Part Number</label>
+        <input 
+              type="email" 
+              class="form-control" 
+              formControlName="id" 
+              placeholder="Enter Part Number"
+              [readonly]="bth1" >
+      </div>
+      
+      <div class="form-group">
+        <label *ngIf="bth1" for="exampleInputPassword1" >Part Quantity</label>
+        <input *ngIf="bth1" 
+                type="text" 
+                class="form-control" 
+                formControlName="quantity" 
+                placeholder="Enter Quantity" 
+        >
+      </div>
+      
+      <div class="form-group">
+        <label *ngIf="bth1" for="exampleInputPassword1" >vendor name</label>
+        <input *ngIf="bth1" 
+                type="text" 
+                class="form-control" 
+                formControlName="name"  
+                placeholder="Vendor" 
+        >
+      </div>
+      
+      <br>
+      
+      
+          
+      <button [disabled]="ordercheck.invalid"  class="btn btn-primary" type="submit" *ngIf="bth1" >Place Order</button>
+  
+    </form>
+    <button (click)="checko(ordercheck.value)" class="btn btn-primary" *ngIf="!bth1">Check </button>
+</div>

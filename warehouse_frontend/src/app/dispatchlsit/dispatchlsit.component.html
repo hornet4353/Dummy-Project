@@ -1,0 +1,28 @@
+<ul class="nav justify-content-end">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="dispatch-part">Go back to Dispatch Page</a>
+    </li>
+</ul><br><br>
+
+<h1 class="text-center">Dispatch List</h1><br><br>
+
+<table class="table table-striped" >
+    <thead>
+        <tr>
+            <th>Dispatch ID</th>
+            <th>Part Number</th>
+            <th>Customer Name</th>
+            <th>Quantity</th>
+            <th>Date of Dispatch</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let d of list">
+            <td>{{d.id}}</td>
+            <td>{{d.part.pnumber}}</td>
+            <td>{{d.name}}</td>
+            <td>{{d.quantity}}</td>
+            <td>{{d.date}}</td>
+        </tr>
+    </tbody>
+</table>

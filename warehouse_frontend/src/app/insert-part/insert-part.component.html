@@ -1,0 +1,31 @@
+<br>
+<div class="col-md-8 offset-md-3"></div> 
+<h3>Insert Part</h3>
+<form (ngSubmit) = "onSubmit()">
+
+    <div class="form-group">
+        <label>Part Number</label>
+        <input type="text" class="form-control" id="pnumber"
+            [(ngModel)] = "insert.pnumber" name="pnumber">
+    </div>
+
+    <div class="form-group">
+        <label>Part Name</label>
+        <input type="text" class="form-control" id="pname"
+            [(ngModel)] = "insert.pname" name="pname">
+    </div>
+
+    <div class="form-group">
+        <label>Part Quantity</label>
+        <input type="text" class="form-control" id="pquantity"
+            [(ngModel)] = "insert.pquantity" name="pquantity">
+    </div>
+
+    <div class="form-group">
+        <label>Part Location</label>
+        <input type="text" class="form-control" id="plocation"
+            [(ngModel)] = "insert.plocation" name="plocation">
+    </div><br>
+
+    <button class="btn btn-success" type="submit">Insert</button>
+</form> 
